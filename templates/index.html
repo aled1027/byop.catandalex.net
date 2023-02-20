@@ -1,0 +1,17 @@
+<!--
+This overrides https://github.com/simonw/datasette/blob/main/datasette/templates/index.html
+https://github.com/simonw/museums/blob/main/templates/index.html
+-->
+
+{% extends "default:index.html" %}
+
+{% block content %}
+<h1>{{ metadata.title or "Datasette" }}{% if private %} 🔒{% endif %}</h1>
+<p>Website for BYOP, bring your own project!</p>
+
+<!-- Separation line from usual datasette page -->
+<br />​<hr />​​​​​​​​​​​​​​​​​​​<br />
+
+{{ super() }}
+
+{% endblock %}

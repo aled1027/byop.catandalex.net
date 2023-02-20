@@ -1,0 +1,78 @@
+/*
+This file themes the site by overriding the css in app.css, which can be found here:
+https://github.com/simonw/datasette/blob/main/datasette/static/app.css
+*/
+
+/*  */
+:root {
+    /* light theme */
+    --bg-color: rgb(25 26 34);
+    --bg-color-alt: rgb(25 26 34);
+    --text: rgb(238 238 245);
+    --primary: rgb(132 143 247);
+    --on-surface: rgb(181 188 206);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        /* dark theme */
+        --bg-color: rgb(255 255 255);
+        --bg-color-alt: rgb(235 235 235);
+        --text: rgb(25 26 34);
+        --primary: rgb(93, 108, 246);
+        --on-surface: rgb(49 67 78);
+    }
+}
+
+
+header {
+    background-color: var(--bg-color);
+    color: var(--on-surface);
+    border-bottom: 1px dashed var(--on-surface);
+}
+
+body {
+    /* : 10px; */
+    background-color: var(--bg-color);
+    color: var(--on-surface);
+}
+
+ol,
+ul {
+    list-style: disc;
+    margin-left: 16px;
+}
+
+pre {
+    border: .01em solid var(--on-surface);
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+span,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--text);
+}
+
+a:visited {
+    color: var(--text);
+}
+
+header a:link,
+header a:visited,
+header a:hover,
+header a:focus,
+header a:active,
+header button.button-as-link,
+a:link {
+    color: var(--primary);
+}

@@ -1,0 +1,13 @@
+{% extends "default:row.html" %}
+
+{% block content %}
+
+{% for row in display_rows %}
+
+<p>Tags: {{ row["tags"] }}</p>
+
+{{ row["html_body"]|safe }}
+
+{% endfor %}
+
+{% endblock %}
