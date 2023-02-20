@@ -1,4 +1,4 @@
-# byop.catandblex.net
+# byop.catandalex.net
 
 ```bash
 # Build the database
